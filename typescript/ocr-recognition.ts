@@ -1,6 +1,4 @@
-open System
-
-// Convert digits (from 0 to 9) to text output given the pattern below. Each digit is represented by a grid of 4 rows and 3 columns with last row always empty.
+// Create console app to convert any number to text output given the pattern below. Each digit is represented by a grid of 4 rows and 3 columns with last row always empty.
 //         " _ "
 //         "| |"
 //         "|_|"
@@ -52,9 +50,3 @@ open System
 //         "   " = 9
 //
 //         all else = an error
-
-
-
-
-
-
