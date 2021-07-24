@@ -38,7 +38,7 @@ func NewClient(baseURL *url.URL) *Client {
 // GetTwoRandomDogFactsRequest returns two random facts about dogs
 // from the API https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=2
 func (c *Client) GetTwoRandomDogFactsRequest() ([]DogFact, error) {
-	rel := &url.URL{Path: "/api/v1/resources/dogs?number=1"}
+	rel := &url.URL{Path: "api/v1/resources/dogs?number=1"}
 	url := c.BaseURL.ResolveReference(rel)
 
 	req, err := http.NewRequest("GET", url.String(), nil)
