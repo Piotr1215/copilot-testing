@@ -1,7 +1,8 @@
-package main
+package gocopilot
 
 import (
 	"fmt"
+	"math"
 )
 
 /*
@@ -18,7 +19,7 @@ let canAttack (queen1: int * int) (queen2: int * int) =
     col1 = col2 || row1 = row2 || abs (col1 - col2) = abs (row1 - row2)
 */
 
-func main() {
+func queenAttack() {
 	queen1 := []int{3, 4}
 	queen2 := []int{0, 0}
 	fmt.Println(queen1, queen2)
@@ -27,7 +28,7 @@ func main() {
 
 func canAttack(queen1, queen2 []int) bool {
 	if queen1[0] == queen2[0] || queen1[1] == queen2[1] ||
-		abs(queen1[0] - queen2[0]) == abs(queen1[1] - queen2[1]) {
+		math.Abs(queen1[0] - queen2[0]) == math.Abs(queen1[1] - queen2[1]) {
 		return true
 	}
 	return false

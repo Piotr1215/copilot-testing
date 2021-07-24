@@ -6,11 +6,11 @@
 //
 // For example, the years 2000 and 2400 are leap years, while 1800,
 // 1900, 2100, 2200, 2300 and 2500 are not.
-package main
+package gocopilot
 
 import "fmt"
 
-func main() {
+func leapYear() {
 	fmt.Println(isLeapYear(2000))
 	fmt.Println(isLeapYear(2400))
 	fmt.Println(isLeapYear(1800))

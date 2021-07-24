@@ -1,4 +1,4 @@
-package main
+package gocopilot
 
 // Convert digits (from 0 to 9) to text output given the pattern below. Each digit is represented by a grid of 4 rows and 3 columns with last row always empty.
 //         " _ "
@@ -57,7 +57,7 @@ import (
 	"os"
 )
 
-func main() {
+func ocrRecognition() {
 	if len(os.Args) != 2 {
 		fmt.Println("Please enter a number")
 		os.Exit(1)
