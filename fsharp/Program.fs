@@ -10,7 +10,11 @@ let leapYear' (year: int): bool =
 
 [<EntryPoint>]
 let main argv =
-    let year = int argv.[0]
-    let isLeap = leapYear year
-    printfn "%d is %b" year isLeap
+    let rows =
+        [ " _ ";
+          " _|";
+          " _|";
+          "   " ]
+    let res = OCR.Recognition.convert(rows)
+    printfn "%A" res
     0 // return an integer exit code

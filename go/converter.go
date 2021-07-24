@@ -1,5 +1,5 @@
 // Create command line tool to convert grams to kilograms.
-package main
+package gocopilot
 
 import (
 	"fmt"

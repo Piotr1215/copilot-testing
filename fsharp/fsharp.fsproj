@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="ocr-recognition.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
