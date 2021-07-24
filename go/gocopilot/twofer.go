@@ -1,14 +1,8 @@
-package main
+package gocopilot
 
 import (
 	"fmt"
 )
-
-func main() {
-	fmt.Println(twofer("Bob"))
-	fmt.Println(twofer("Alice"))
-	fmt.Println(twofer(""))
-}
 
 // Sample code
 func twofer(name string) string {
