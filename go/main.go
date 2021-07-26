@@ -1,7 +1,5 @@
 package main
 
-// import "github.com/Piotr1215/copilot-testing/co-pilot"
-
 import (
 	"encoding/json"
 	"fmt"
