@@ -2,6 +2,7 @@ package gocopilot
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"net/url"
 )
@@ -38,10 +39,8 @@ func NewClient(baseURL *url.URL) *Client {
 // GetTwoRandomDogFactsRequest returns two random facts about dogs
 // from the API https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=2
 func (c *Client) GetTwoRandomDogFactsRequest() ([]DogFact, error) {
-	rel := &url.URL{Path: "api/v1/resources/dogs?number=1"}
-	url := c.BaseURL.ResolveReference(rel)
 
-	req, err := http.NewRequest("GET", url.String(), nil)
+	req, err := http.NewRequest("GET", "https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=2", nil)
 	if err != nil {
 		return nil, err
 	}
@@ -59,6 +58,8 @@ func (c *Client) GetTwoRandomDogFactsRequest() ([]DogFact, error) {
 	if err := json.NewDecoder(resp.Body).Decode(&facts); err != nil {
 		return nil, err
 	}
+
+	fmt.Println(facts)
 
 	return facts, nil
 }
