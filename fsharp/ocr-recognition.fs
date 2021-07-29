@@ -13,6 +13,7 @@ let private convertDigit (input: string list) =
 
     // Flat out the list to a single string, for easier match:
     let oneLinerDigit = input |> String.concat " "
+
     match oneLinerDigit with
     | " _  | | |_|    " -> "0"
     | "      |   |    " -> "1"
@@ -41,12 +42,11 @@ let private convertLine (input: string list) =
         None
     else
         let numberOfDigits = (input.[0].Length / 3)
+
         let digits =
-            [
-                for i in [0..numberOfDigits - 1] do
-                    input
-                    |> List.map (fun s -> s.[i * 3..(i * 3 + 2)]) // Pick substrings (i.e. each digit in the "line")
-            ]
+            [ for i in [ 0 .. numberOfDigits - 1 ] do
+                  input
+                  |> List.map (fun s -> s.[i * 3..(i * 3 + 2)]) ] // Pick substrings (i.e. each digit in the "line")
             |> List.map convertDigit
             |> String.concat ""
 
@@ -57,7 +57,8 @@ let convert (input: string list) =
     if input.Length % 4 <> 0 then
         None
     // Verify that all rows have a length that is multiple of 3
-    elif input |> List.exists (fun str -> str.Length % 3 <> 0) then
+    elif input
+         |> List.exists (fun str -> str.Length % 3 <> 0) then
         None
     else
         let lines =

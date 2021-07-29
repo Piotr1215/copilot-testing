@@ -18,7 +18,4 @@ let detectCase input =
 
 let printer (inp: string) = printfn "%s" inp
 
-let detectCaseAndPrint =
-    detectCase >> printer
-
-
+let detectCaseAndPrint = detectCase >> printer
