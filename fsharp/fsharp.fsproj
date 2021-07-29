@@ -1,13 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
+    <Compile Include="stringOperations.fs" />
     <Compile Include="ocr-recognition.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
 </Project>
